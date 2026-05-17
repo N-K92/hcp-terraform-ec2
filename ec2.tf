@@ -5,3 +5,8 @@ resource "aws_instance" "ec2_instance" {
     Name = "ec2_terraform"
   }
 }
+
+module "ec2" {
+  source  = "app.terraform.io/terraform-learning-organization-2026/ec2/me"
+  version = "2.0.0"
+}
